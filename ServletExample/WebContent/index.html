@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My First Example</title>
+<link href = "css/Styles.css" type = "text/css" rel="stylesheet">
+</head>
+<body>
+<header>
+	<div id = "hdLeft">
+	<img alt="JellyFish" src="Images/Jellyfish.jpg">
+	</div>
+	<div id = "hdRight">
+	<h2>Beautiful Fish</h2>
+	</div>
+</header>
+<nav>
+	<ul>
+		<li><a href = "Home.html"><span style = "padding-left:5px">Home</span></a></li>
+		<li><a href = "Book.html">Book</a></li>
+		<li><a href = "Order.html">Order</a></li>
+		<li><a href = "Review.html">Reviews</a></li>
+		<li><a href = "Contact.html">Contact Us</a></li>
+	</ul>
+
+</nav>
+<section>
+	<form action="greet">
+		<table>
+			<tr>
+				<td><label>User Name</label></td>
+				<td><input type = "text" name = "userName" id = "userName"/></td>
+			</tr>
+			<tr>
+				<td><label>Password</label></td>
+				<td><input type = "password" name = "passWord" id = "passWord"/></td>
+			</tr>
+			<tr>
+				<td><label>Email</label></td>
+				<td><input type = "email" name = "email" required = "required" multiple = "multiple"/></td>
+			</tr>
+			<tr>
+				<td><label>Telephone</label></td>
+				<td><input type = "tel" name = "tel" pattern = "\d{3}-\d{4}-\d{3}" placeholder = "999-9999-999"/></td>
+			</tr>
+			<tr>
+				<td><label>Role</label></td>
+				<td>
+				<select name = "role">
+					<option value = "ADMIN">Administrator</option>
+					<option value = "CHEF">Chef</option>
+					<option value = "WAITER">Waiter</option>
+					<option value = "MANAGER">Manager</option>
+				</select> 
+				</td>			
+			</tr>
+			<tr>
+				<td colspan = "2"><input type = "submit" value = "Log in"/></td>
+			</tr>
+			
+		</table>
+	</form>
+	
+</section>
+
+<script type="text/javascript">
+	var element = document.getElementById("userName");
+	
+	element.addEventListener("copy", function(event){
+		event.preventDefault();
+		alert("copy not allowed");
+	});
+	element.addEventListener("paste", function(event){
+		event.preventDefault();
+		alert("paste not allowed");
+	});
+	document.addEventListener("contextmenu", function(event){
+		event.preventDefault();
+		alert("Right Click not allowed");
+	});
+	
+</script>
+</body>
+</html>

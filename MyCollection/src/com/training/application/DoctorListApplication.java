@@ -2,6 +2,8 @@ package com.training.application;
 
 import java.util.TreeSet;
 
+import org.apache.log4j.*;
+
 import com.training.domains.Doctor;
 import com.training.domains.NursingHome;
 import com.training.domains.Patient;
@@ -10,15 +12,22 @@ public class DoctorListApplication {
 
 	public static void main(String[] args) {
 		
+		Logger log = Logger.getLogger("MyFirstLog");
+		BasicConfigurator.configure();
+		
 		Doctor doc1 = new Doctor(101, "Ramesh", "Dentist");
 		Doctor doc2 = new Doctor(105, "Suresh", "Surgeon");
 		Doctor doc3 = new Doctor(102, "Mahesh", "Gyno");
+		
+		log.info("main method called");
 		
 		NursingHome nur = new NursingHome();
 		
 		Patient pat1 = new Patient(201, "Tom", 896523);
 		Patient pat2 = new Patient(202, "Dick", 896523);
 		Patient pat3 = new Patient(201, "Harry", 896523);
+		
+		log.info("Value Set");
 		
 		TreeSet<Patient> pat = new TreeSet<Patient>();
 		
@@ -35,7 +44,7 @@ public class DoctorListApplication {
 		
 		nur.printSortedDoctor(1);	
 		
-		
+		log.info("Done Bye");
 		
 	}
 

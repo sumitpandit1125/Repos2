@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<input type = "text" id = "txt1"><span id = "msg"></span>
+
+<script type="text/javascript">
+	var element = document.getElementById("txt1");
+	
+	element.addEventListener("input", function(){
+		var userName = element.value;
+		var length = userName.length;
+		var msg;
+		if(length<=3){
+			msg = "weak";
+		}
+		else if(length<8 ){
+			msg = "medium";
+		} 
+		else{
+			msg = "Strong";
+		}
+		document.getElementById("msg").innerHTML = msg;
+		
+	});
+</script>
+
+</body>
+</html>

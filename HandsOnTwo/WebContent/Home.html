@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<link href = "Styles/style1.css" type = "text/css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<form id = "form1">
+	<header>Place Order</header>
+<table>
+	
+	<tr>	
+		<th>Customer Name</th>
+		<td><input type = "text" size = "30" id = "custName" required = "required"></td>
+		
+	<tr>
+		<th>Location</th>
+		<td>
+			<select name = "location" id = "location">
+				<option value = "default">Select</option>
+				<option value = "bhopal">Bhopal</option> 
+				<option value = "indore">Indore</option> 
+				<option value = "pune">Pune</option> 
+			</select>
+		</td>
+		
+	<tr>
+		<th>Payment Mode</th>
+		<td>
+			<input type = "radio" name = "payMode" value = "debitCard">Debit Card
+			<input type = "radio" name = "payMode" value = "creditCard">Credit Card
+			<input type = "radio" name = "payMode" value = "cash" checked="checked">Cash
+		</td>
+	<tr>
+		<th>Choose Offer</th>
+		<td>
+			<input type = "checkbox" name = "gift" id = "gift1" value = "Food Coupon">Food Coupon
+			<input type = "checkbox" name = "gift" id = "gift2" value = "Movie Ticket">Movie Ticket
+			<input type = "checkbox" name = "gift" id = "gift3" value = "Uber Trip">Uber Trip
+		</td>
+	<tr>
+		<td colspan = "2" id = "centerRow"><input type = "Reset" value = "RESET" id = "Reset"><input type = "button" value = "SUBMIT" id = "submit" ></td>
+	
+
+</table>
+</form>
+</body>
+
+<script type="text/javascript" src = "Scripts/script.js"></script>
+
+
+</html>

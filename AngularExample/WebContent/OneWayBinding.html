@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src = "Scripts/angular.js"></script>
+<script type="text/javascript">
+	var item = [{
+		"itemName":'Television',
+		"image":'Images/tv.jpg',
+		"price":45000.69
+	},
+	{
+		"itemName":'Television',
+		"image":'Images/tv.jpg',
+		"price":45000.69
+	},
+	{
+		"itemName":'Television',
+		"image":'Images/tv.jpg',
+		"price":45000.69
+	},
+	{
+		"itemName":'Television',
+		"image":'Images/tv.jpg',
+		"price":45000.69
+	}	
+	];
+	
+	var app = angular.module("oneWay",[]);
+	
+	app.controller('itemController',function($scope){
+		$scope.products = item;
+	});
+	
+</script>
+</head>
+<body>
+
+<div data-ng-app = "oneWay"	data-ng-controller = 'itemController' >
+<table border = "1">
+	<tr  data-ng-repeat = "product in products">
+		<td data-ng-bind="product.itemName"></td>
+	
+		<td><img alt = "Product" data-ng-src = {{product.image}} width = "200"></img></td>
+	
+		<td><p data-ng-bind = "product.price"></p>
+	
+	</tr>
+
+</table>
+	
+	
+</div>
+
+</body>
+</html>

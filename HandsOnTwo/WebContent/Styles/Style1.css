@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+
+tr, td {
+	border : 2px solid blue;
+	text-align : left;
+}
+
+th {
+	border : 2px solid blue;
+	text-align : left;
+	
+}
+
+#centerRow{
+	text-align : center;
+}
+
+body {
+	background-color: #ff8080;
+	
+}
+
+header {
+	color : #000040;
+	font-size : 25px;
+	font-style : oblique;
+	text-align : center;
+}
+
+table {
+	border : 1px solid blue;
+	margin-left : auto;
+	margin-right: auto;
+	width : 60%;
+	border-collapse : collapse;
+}
+
+select, option {
+		width : 205px;
+}

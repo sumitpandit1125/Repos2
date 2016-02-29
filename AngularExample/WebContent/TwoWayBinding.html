@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TwoWayBinding</title>
+<script type="text/javascript" src = "Scripts/angular.js"></script>
+<script type="text/javascript">
+	
+	
+	var app = angular.module("twoWay",[]);
+	
+	app.controller('currController',function($scope){
+		$scope.inr = 0;
+		$scope.convRate = 55.00;
+		$scope.result = $scope.inr * $scope.convRate;
+		$scope.change=function(){
+			
+			$scope.result = $scope.inr * $scope.convRate;
+		}
+	});
+	
+</script>
+</head>
+<body>
+
+<div data-ng-app = "twoWay"	data-ng-controller = 'currController'>
+
+	Indian Rupees <input type = "text" name = "inr" data-ng-model="inr" data-ng-change = "change()">
+	Rate <input type = "text" name = "conv" data-ng-model = "convRate" data-ng-change = "change()">
+	Result <input type = "text" name = "result" data-ng-model = "result">
+	
+</div>
+
+</body>
+</html>

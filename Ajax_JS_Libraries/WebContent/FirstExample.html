@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Execution Order</title>
+<script type="text/javascript" src = "jslibs/jquery-2.2.1.js"></script>
+<script type="text/javascript">
+
+	
+	window.onload = function (){
+		alert("on load-2 called");
+	}
+	
+	window.onload = function (){
+		alert("on load-1 called");
+	}
+	
+	$(function(){		
+		
+		alert(" Ready-1 Called ");
+		
+	});
+	
+	$(function(){		
+		
+		alert(" Ready-2 Called ");
+		
+	});
+
+</script>
+
+
+
+</head>
+<body>
+
+<h1>jQuery Example</h1>
+<h3 id = "detail">Ajax Calls</h3>
+
+<ul>
+	<li>UML</li>
+	<li>OOAD</li>
+	<li>RDBMS</li>
+	<li>Java</li>
+	<li>ANT &amp; log4j</li>
+	<li>Design Pattern</li>
+</ul>
+
+</body>
+</html>
