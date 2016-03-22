@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id = "invoice1" class="com.training.domains.Invoice">
+	<constructor-arg name="cust" ref="cust"></constructor-arg>
+	<constructor-arg>
+		<map>
+			<entry key="1" value-ref="item1"></entry>
+			<entry key="2" value-ref="item2"></entry>
+		</map>
+		
+	</constructor-arg>
+	
+</bean>
+
+<bean id = "cust" class = "com.training.domains.Customer" scope="prototype">
+	<property name="customerId" value = "1010"></property>
+	<property name="customerName" value = "Ramesh"></property>
+	<property name="phoneNumber" value = "9874563219"></property>
+	<property name="add" ref="addr"></property>
+</bean>
+
+<bean id = "addr" class="com.training.domains.Address">
+	<constructor-arg name="addrLine1" value = "Gandhi Strret"></constructor-arg>
+	<constructor-arg name="addrLine2" value = "Gandhi Strret"></constructor-arg>
+	<constructor-arg name="city" value = "Kolkata"></constructor-arg>
+	<constructor-arg name="pincode" value = "700039"></constructor-arg>
+</bean>
+
+<bean id = "item1" class="com.training.domains.Item">
+	<constructor-arg index="0" value = "101"></constructor-arg>
+	<constructor-arg index="2" value = "50.50"></constructor-arg>
+	<constructor-arg index="1" value = "MOMO"></constructor-arg>
+</bean>
+
+<bean id = "item2" class="com.training.domains.Item">
+	<constructor-arg type="java.lang.String" value = "SpringRoll"></constructor-arg>
+	<constructor-arg type="double" value = "30.50"></constructor-arg>
+	<constructor-arg type="int" value = "102"></constructor-arg>
+</bean>
+
+
+
+
+</beans>

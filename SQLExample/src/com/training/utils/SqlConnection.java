@@ -1,9 +1,10 @@
 package com.training.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
+
 import java.sql.*;
 import java.util.Properties;
+
+import java.io.InputStream;
 
 public class SqlConnection {
 	
@@ -14,8 +15,10 @@ public class SqlConnection {
 			
 			Properties prop = new Properties();
 			
-			FileInputStream inStream = 
-					new FileInputStream(new File("DbConnection.properties"));
+			//FileInputStream inStream = 
+			//		new FileInputStream(new File("DbConnection.properties"));
+			
+			InputStream inStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("DbConnection.properties");
 			
 			prop.load(inStream);
 			

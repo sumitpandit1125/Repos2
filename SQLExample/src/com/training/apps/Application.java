@@ -1,8 +1,6 @@
 package com.training.apps;
 
-import java.util.ArrayList;
 import com.training.daos.CustomerDAO;
-import com.training.entity.Customer;
 
 public class Application {
 
