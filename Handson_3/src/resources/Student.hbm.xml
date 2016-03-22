@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 21, 2016 11:07:01 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.training.entity.Student" table="STUDENT">
+        <id name="stuId" type="int">
+            <column name="STUID" />
+            <generator class="increment" />
+        </id>
+        <property name="stuName" type="java.lang.String">
+            <column name="STUNAME" />
+        </property>
+        <property name="academicPerformance" type="double">
+            <column name="ACADEMICPERFORMANCE" />
+        </property>
+        <property name="academicEvents" type="double">
+            <column name="ACADEMICEVENTS" />
+        </property>
+        <property name="sportsActivity" type="double">
+            <column name="SPORTSACTIVITY" />
+        </property>
+        <property name="culturalActivities" type="double">
+            <column name="CULTURALACTIVITIES" />
+        </property>
+    </class>
+</hibernate-mapping>
